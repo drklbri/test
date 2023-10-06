@@ -26,8 +26,8 @@ sample_rate = 1000
 plt.figure(figsize=(14, 8 * len(freq_values)))
 
 for idx, freq in enumerate(freq_values, 1):
-    time_harmonic, harmonic_waveform = generate_waveform(freq, duration_time, sample_rate, waveform_type='harmonic')
-    time_square, square_waveform = generate_waveform(freq, duration_time, sample_rate, waveform_type='square')
+    time_harmonic, harmonic_waveform = generate_sig(freq, duration_time, sample_rate, waveform_type='harmonic')
+    time_square, square_waveform = generate_sig(freq, duration_time, sample_rate, waveform_type='square')
 
     freq_harmonic, spectrum_harmonic = compute_frequency_spectrum(harmonic_waveform, sample_rate)
     freq_square, spectrum_square = compute_frequency_spectrum(square_waveform, sample_rate)
